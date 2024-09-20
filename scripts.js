@@ -47,7 +47,7 @@ function convertValues() {
         }).format(inputCurrencyValue / currency.euroToday)
     }
 
-    if (currencySelectToConvert.value === "real") {
+    if (currencySelect.value === "real") {
         currencyValueConverted.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
@@ -83,8 +83,11 @@ function convertValues() {
         currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
-        }).format(inputCurrencyValue)
+        }).format(inputCurrencyValue / currency.realToday)
     }
+
+
+
 
 }
 
